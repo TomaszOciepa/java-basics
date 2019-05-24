@@ -62,11 +62,42 @@ public class Exercise7 {
         }
 
         System.out.println("index to: " + index1 + " oraz "+ index2);
-        
-
-        System.out.println("Nowa tablica to: ");
 
 
+        if (index1 != -1 && index2 != -1){
+            System.out.println("znaleziono pare sumującą");
+            System.out.println("Nowa tablica to:");
+
+            int[] newTable = new int[3];
+            int counter = 0;
+            for (int i = 0; i < randomTable.length; i++) {
+                if (i == index1 ){
+
+                } else if (i == index2){
+
+                } else{
+                    if (counter< 3){
+                        newTable[counter] = randomTable[i];
+                    }
+
+                    counter++;
+                }
+            }
+
+            for (int i = 0; i < newTable.length; i++) {
+                if ( i == 0){
+                    System.out.print("["+newTable[i]+", ");
+                }else if (i == 2){
+                    System.out.println(newTable[i]+"]");
+                }else {
+                    System.out.print(newTable[i]+" ,");
+                }
+
+            }
+
+        }else {
+            System.out.println("Nie znaleziono pary sumujacej");
+        }
 
 
     }
